@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+         <div class = "clockbackground">
+             <img src = "clockimage.png" class="clockback">
+             <img src ="hand.png" class ="hour">
+             <img src ="hand.png" class ="minute">
+
+         </div>
+  </body>
+
+<footer>
+<style>
+
+
+@keyframes hourly{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(60deg);
+    }
+}
+
+
+@keyframes minutely{
+    from{
+      transform: rotate(265deg);
+    }
+    to{
+      transform: rotate(980deg);
+    }
+
+}
+
+
+.clockbackground {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    background-color: blue;
+  }
+  .clockback{
+    display: block;
+    background-color: blue;
+    width: 95%;
+  }
+
+  .minute{
+      position: absolute;
+      top: 43%;
+      right: 21%;
+      transform: rotate(30deg);
+      transform-origin: 0% 44%;
+      width: 31%;
+      height: auto;
+      animation-name: minutely;
+      animation-duration: 12s;
+  }
+
+  .hour {
+    width: 25%;
+    height: auto;
+    transform-origin: 0% center;
+    position: absolute;
+    top: 42%;
+    left: 47.5%;
+    animation-name: hourly;
+    animation-duration: 12s;
+
+  }
+
+
+</style>
+
+</footer>
+
+</html>
