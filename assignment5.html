@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang='eng' dir='ltr'>
+<head>
+
+  <meta charset="utf-8">
+  <link rel='stylesheet' href="style.css">
+  <title></title>
+  </head>
+
+  <body>
+    <div class="flex">
+
+      <div class="flex-child">
+        <img src="https://i.imgur.com/kdOyxwV.png" class="image" alt="icecream picture">
+        <div>
+      <p class=""> Ice cream is great! </p><br><br>
+           <a class="red" href="#open1">Open modal Link</a>
+      </div>
+      </div>
+
+      <div class="flex-child">
+        <img src="https://i.imgur.com/4T0K3nf.png" class="image" alt="cookie picture">
+        <div>
+    <p class=""> Cookies are great! </p><br><br>
+        <a class="red" href="#open2">Open modal Link II</a>
+      </div>
+    </div>
+
+<!--MODAL-->
+    <div id="open1" class="modalwindow">
+      <div class="box">
+     <div class="msgblock">
+          <h1 class="header">Modal Window 1 Example</h1>
+          <p style="background-color: lightblue"><br>Ice cream is great! Ice cream is great! Ice cream is great!
+            Ice cream is great! Ice cream is great! Ice cream is great! <br><br></p>
+           <img src="https://i.imgur.com/Zx6jTlA.png" class="modalimg" alt="missing image">
+          <div class=""> <button class="button"> <a href="#">Close</a></button></div>
+        </div>
+      </div>
+    </div>
+
+
+
+          <div id="open2" class="modalwindow">
+             <div class="msgblock">
+                  <h1 class="header2">Modal Window 2 Example</h1>
+                  <p style="background-color: teal"><br>Cookies are great! Cookies are great! Cookies are great!
+                    Cookies are great! Cookies are great! Cookies are great! <br><br></p>
+                   <img src="https://i.imgur.com/297YNON.png" class="modalimg" alt="missing image">
+                   <div class=""> <button class="button2"> <a href="#">X</a></button></div>
+                 </div>
+               </div>
+
+</body>
+
+<footer>
+  <style>
+
+.header{
+  color:white;
+  background-color: lightblue;
+}
+.header2{
+  color:white;
+  background-color: teal;
+}
+
+  .flex {
+      display: flex;
+      width: 950px;
+      height: 400px;
+      margin: auto;
+      overflow: auto;
+    flex: 2 1 0;
+  }
+  .flex-child {
+      flex: 1;
+      border: 4px solid BLUE;
+      text-align: center;
+  }
+  .flex-child:first-child {
+      margin-right: 60px;
+  }
+  .red{
+  background-color: red;
+  color: white;
+  padding: 6%;
+  text-decoration: none;
+  text-shadow: 2px 2px black;
+
+}
+.image{
+    width:40%;
+    height:50%;
+    margin: auto;
+    margin-bottom: 4%;
+    margin-top: 20px;
+    text-align: center;
+  }
+.modalwindow{
+position: fixed;
+top:1%;
+bottom:0%;
+left:0;
+right:0;
+background-color:rgba(66, 230, 245,0.8);
+opacity: 0%;
+pointer-events: none;
+
+}
+.modalwindow:target {
+ opacity: 1;
+ pointer-events: auto;
+}
+.msgblock{
+  width: 45%;
+  height: 55%;
+  background-color: DarkMagenta;
+  margin: auto;
+  position: relative;
+  margin: auto;
+  overflow: auto;
+}
+
+.modalimg{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  overflow: auto;
+}
+.button{
+  background-color: #4CAF50;
+  padding: 5px 3px;
+  position: absolute;
+  top: 65%;
+  right: 3%;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2{
+  background-color: hotpink;
+  float: right;
+  position:absolute; /* how to put button top-right of div */
+  top:0;
+  right:0;
+  padding: 5px 2px;
+  font-size: 18px;
+  margin: 3px 2px;
+  cursor: pointer;
+}
+</style>
+
+</footer>
