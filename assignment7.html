@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> </meta>
+    </meta>
+    <script src="script.js"></script>
+    <title>Jul 26</title>
+</head>
+
+<body>
+
+<h1>Hello!</h1>
+
+
+</body>
+<footer>
+    <script>
+//Use the BMI example from Activity #1, and the code you already wrote, and improve it:
+//1. Print a nice output to the console, saying who has the higher BMI.
+//The message can be either "Lucas' BMI is higher than John's!" or "John's BMI is higher than Lucas'!"
+//2. Use a template literal to include the BMI values in the outputs.Example: "Lucas' BMI (28.3) is higher than John's (23.9)!"
+//HINT: Use an if/else statement
+
+
+
+const johnWeight = "92"; //kg
+const johnHeight = "1.95"; //m
+
+const lucasWeight = "78"; //kg
+const lucasHeight = "1.69"; //m
+
+console.log(johnWeight / johnHeight ** 2);
+console.log(lucasWeight / lucasHeight ** 2);
+
+const johnBMI = '24.194';
+const lucasBMI = '27.309';
+const lucasHigherBMI = lucasBMI > johnBMI;
+
+console.log(lucasHigherBMI); // true
+
+console.log(johnBMI > lucasBMI); // false
+console.log(lucasBMI > johnBMI); // true
+
+console.log(`The BMI of Lucas is ${lucasBMI}, and the BMI of John is ${johnBMI},
+Lucas has a higher BMI than john, that is ${lucasHigherBMI}.`);
+
+if (lucasBMI > johnBMI){
+    console.log("Lucas BMI is higher than Johns BMI!");
+    console.log(`Lucas BMI is ${lucasBMI}`);
+}
+else{
+    console.log("Johns BMI is higher than Lucas BMI!");
+    console.log(`Johns BMI is ${johnBMI}`);
+};
+    </script>
+</footer>
+
+
+</html>
