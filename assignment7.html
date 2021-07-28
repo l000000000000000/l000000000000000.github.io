@@ -6,8 +6,7 @@
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> </meta>
     </meta>
-    <script src="script.js"></script>
-    <title>Jul 26</title>
+    <title>asg7</title>
 </head>
 
 <body>
@@ -16,7 +15,7 @@
 
 
 </body>
-<footer>
+
     <script>
 //Use the BMI example from Activity #1, and the code you already wrote, and improve it:
 //1. Print a nice output to the console, saying who has the higher BMI.
@@ -25,7 +24,7 @@
 //HINT: Use an if/else statement
 
 
-
+// B
 const johnWeight = "92"; //kg
 const johnHeight = "1.95"; //m
 
@@ -54,9 +53,46 @@ if (lucasBMI > johnBMI){
 else{
     console.log("Johns BMI is higher than Lucas BMI!");
     console.log(`Johns BMI is ${johnBMI}`);
-};
-    </script>
-</footer>
+}
+   
+
+// A
+
+function convertToFahrenheit(celsius){
+    let fahrenheit = (celsius * 9/5) + (32);
+    return fahrenheit;
+  }
+ function convertToCelsius(fahrenheit){
+      let celsius = (fahrenheit - 32) * (1.8);
+      return celsius;
+  }
+
+console.log(convertToFahrenheit(7)); // can change the value to anything to give you output ()
+console.log(convertToCelsius(32));
+// C
+
+const knicksAverageScore = (88 + 91 + 100) / 3;
+const netsAverageScore = (96 + 108 + 89) / 3;
+const nycBasketBallTeamAvgScore = knicksAverageScore > netsAverageScore;
+console.log(nycBasketBallTeamAvgScore);
+
+console.log(`It is ${nycBasketBallTeamAvgScore} that ${knicksAverageScore} is higher than ${netsAverageScore}`);
+
+if(knicksAverageScore <= 100){
+    console.log(`The Knicks scored less than 100 points on average over the span of 3 games`)
+}
+else{
+    console.log(`The Knicks scored more than 100 points on average over the span of 3 games`)
+}
+
+if(netsAverageScore <= 100){
+    console.log(`The Nets scored less than 100 points on average over the span of 3 games`)
+}
+else{
+    console.log(`The Nets scored more than 100 points on average over the span of 3 games`)
+}
+
+</script>
 
 
 </html>
