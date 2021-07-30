@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Proj2.css">
+  </head>
+<body>
+  <div class="header">
+    <div class="HeaderLeft">
+      <img src="images/logo.png" </div>
+    </div>
+  <div class="HeaderRight">
+    <h1 style=color:MediumSeaGreen;>Josefina Body Care Collection</h1>
+    <div class="slide-right">
+    <h3 style=>Discover the exotic sensation of all seasons</h3>
+  </div>
+  </div>
+
+  <div class='frame'>
+        <div class="slidewrapper">
+        <div class="slide p1" style="color: blue">
+          <h3> Summer Sale starts SOON! CODE:&nbsp;&nbsp;<i>SUMMER2020</i>
+         </h3></div>
+        <div class='slide p2'>
+          <h2> Free shipping and handling on orders over $50. CODE:&nbsp;&nbsp;<i>FREE50</i>
+        </h2></div>
+        <div class='slide p3'>
+          <h4> BUY 1 SET GET ONE <u>FREE</u>. &nbsp; &nbsp; &nbsp;<i>exceptions apply</i>
+        </h4></div>
+        <div class='slide p4'><h2> 30% OFF YOUR FIRST ORDER.&nbsp;&nbsp;&nbsp;
+          CODE:  &nbsp;<i><b>I'm new Here</b></i>
+        </h2></div>
+        </div>
+      </div>
+<div class="imagewithbox">
+  <img src="https://i.imgur.com/LU8NkoA.jpg" alt="flower image" style="width:200%;">
+    <div class="text-block">
+      A 100% natural, unique dry oil that nourishes the skin.<br>Enriched with nourishing herbs, specially put
+      <br>together according to the Ayurvedic tradition for the <br>
+      Vata DOsha. With nourishing sweet almond oil and <br>basil.</p>
+    </div>
+  </div>
+
+<div class="twoboxes">
+  <div class="firstbox picbox">
+    <div class="firstboxtext">
+      <p>Unique blend containing <br>antioxidants, vitamin E and the <br>ingredient Centella asiatica.</p>
+    </div>
+  </div>
+  <div class="firstbox secondbox">
+    <h3>Strengthen Your Skin</h3>
+        <p>Special technology makes this whipped cream easy to apply while <br>its rich and velvety formulation noruishes your skin.
+          <br>
+        Enrich with nourshing rice milk and a flowery fragrance of cherry blossom.</p>
+      </div>
+    </div>
+
+
+
+</body>
+
+
+
+  <style>
+body{
+  background-color: #e6bb6c;
+}
+div.slide-left {
+  width:100%;
+  overflow:hidden;
+}
+div.slide-left p {
+  animation: slide-left 10s;
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+  .header{
+    width: 100%;
+    height: 120px;
+    border-radius: 455px;
+    border:2px solid #FFFF00;
+  }
+  .HeaderLeft{
+    width: 16%;
+    height: 130px;
+    animation: scale 8s infinite;
+    border-radius: 10px;
+    animation: popout 8s ease;
+    animation-iteration-count:infinite;
+    }
+  .HeaderLeft img{
+    width: 87%;
+    height: 87%;
+  }
+  @keyframes popout {
+      from{transform:scale(0)}
+      80%{transform:scale(1.1)}
+      to{transform:scale(.8)}
+  }
+.HeaderRight{
+  position: relative;
+  top: -140px;
+  font-family: Segoe Script;
+  text-align:center
+}
+.slide-right {
+position: relative;
+margin-top:10px;
+width: 100%;
+overflow: hidden;
+margin-top: -20px;
+margin-left: 400px;
+max-width: 600px
+}
+.slide-right h3 {
+  animation: 8s slide-right .3s forwards;
+    transform:translateX(-100%);
+    animation-iteration-count: infinite;
+    margin-top:4px;
+}
+
+@keyframes slide-right {
+  to {
+    transform:translateX(0);
+  }
+}
+
+.frame{
+  border: 2px solid yellow;
+  height: 50px;
+  overflow: hidden;
+  margin-top:-130px;
+}
+.slidewrapper{
+  border: 2px solid blue;
+  width: 400%;
+  height: 100%;
+  animation: slideshow 24s;
+  animation-iteration-count:infinite;
+  position: relative;
+  left: 30px;
+  top: -150px;
+}
+.slide{
+  text-align: center;
+  height: 100%;
+  width: 25%;
+  float: right;
+  padding-top: 150px;
+  font-size: 13px;
+}
+.p1{
+background-color: #EDC9AF;
+color: white;
+}
+.p2{
+background-color: #645452;
+color: white;
+}
+.p3{
+background-color: #BC8F8F;
+color: white;
+}
+.p4{
+background-color: #A52A2A;
+color: white;
+}
+@keyframes slideshow {
+
+  0%{margin-left: -20%  }
+  25%{margin-left: -100% }
+  50%{ margin-left: -200% }
+  75%{margin-left: -300%  }
+
+  }
+
+.imagewithbox {
+  display: flex;
+  margin: auto;
+}
+
+.text-block {
+  position: relative;
+  display: flex;
+  border: 5px solid white;
+  background-color: grey;
+  color: black;
+  position: absolute;
+  top: 35%;
+  right: 68%;
+  overflow: auto;
+  padding: 20px;
+}
+.twoboxes{
+  height: 310px;
+  width 90%;
+  display: flex;
+  margin: auto;
+}
+.twoboxes>.firstbox>.firstboxtext{
+  text-align: center;
+  color: white;
+  text-shadow:green 2px 2px;
+  width: 240px;
+  border-style:  outset;
+  border: 2px solid white;
+}
+.twoboxes>.firstbox{
+  height: 100%;
+  width: 25%;
+  margin: auto;
+}
+
+.twoboxes>.picbox{
+  background: url("https://i.imgur.com/C5QWMR2.png");
+  background-size: 100% 100%;
+}
+.twoboxes>.secondbox{
+  background-color: #e6bb6c;
+  margin: auto;
+  width: 25%;
+  font-size: 16px;
+  color: #fffff;
+  border-style: double;
+
+}
+.twoboxes>.secondbox>.p{
+    text-align: center;
+}
+.twoboxes>.secondbox>h3{
+  text-align: center;
+}
+
+</style>
+
+</html>
