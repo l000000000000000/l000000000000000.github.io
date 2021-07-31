@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    <p> Hello</p>
+</body>
+
+<script>
+//Answer A
+
+function calcTip(totalCost)
+{
+    return(totalCost >= 30 && totalCost <= 300 ? totalCost * .15 : totalCost * .2);  
+}
+function totalValue(totalCost)
+{
+    let tip = calcTip(totalCost); 
+
+    let total = totalCost + tip; 
+
+    console.log(`The bill is ${totalCost}, the tip is ${tip}, the total value is ${total}`); 
+}
+totalValue(275); totalValue(28);  totalValue(430); 
+
+//Answer B
+
+function convertToFahrenheit(celsius){
+    let fahrenheit = (celsius * 9/5) + (32);
+    return fahrenheit;
+  }
+ function convertToCelsius(fahrenheit){
+      let celsius = (fahrenheit - 32) * (1.8);
+      return celsius;
+  }
+
+console.log(convertToFahrenheit(7)); // can change the value to anything to give you output ()
+console.log(convertToCelsius(32));
+
+// Answer C
+
+calcAverage = (s1, s2, s3) => {
+
+    return ((s1 + s2 + s3 ) / 3);
+
+}
+
+function checkWinner(avgKnicks, avgNets){
+    if (avgKnicks >= (avgNets)){
+        console.log(`Knicks have won, Knicks outscore ${avgKnicks} vs Nets score of ${avgNets}`);
+    }
+    else if (avgNets >= (avgKnicks)){
+        console.log(`Nets have won, Nets outscore ${avgNets} vs Knicks score of ${avgKnicks}`);
+    }
+    
+}
+    
+console.log("Test Data 1: ");
+checkWinner(calcAverage(65, 54, 49),calcAverage(44, 23, 71));
+
+
+console.log("Test Data 2: ");
+checkWinner(calcAverage(23, 34, 27),calcAverage(85, 54, 41));
+
+
+// Answer D
+
+
+
+
+</script>
+</html>
