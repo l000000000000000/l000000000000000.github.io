@@ -67,6 +67,25 @@ checkWinner(calcAverage(23, 34, 27),calcAverage(85, 54, 41));
 
 // Answer D
 
+function calculateTip(billTotalValue) {
+
+  let tip = billTotalValue > 50 && billTotalValue < 300 ? billTotalValue * .15 : billTotalValue * .20;
+
+  let totalPrice = billTotalValue + tip;
+
+
+  tips.push(tip);
+
+  return tip;
+}
+
+const bill = [125, 555, 44];
+const tips=[];
+const bills = [calculateTip(bill[0]), calculateTip(bill[1]), calculateTip(bill[2])];
+const total= [];
+
+console.log(bills);
+
 
 
 
