@@ -44,11 +44,6 @@ console.log(`The F to C is: ${convertToCelsius(32)}`);
 // Answer C
 console.log("Part C: ");
 
-calcAverage = (a1, a2, a3) => {
-
-    return ((a1 + a2 + a3 ) / 3);
-
-}
 
 function checkWinner(avgKnicks, avgNets){
     if (avgKnicks >= (avgNets*2)){
@@ -58,11 +53,18 @@ function checkWinner(avgKnicks, avgNets){
         console.log(`Nets have won, Nets outscore ${avgNets} to the Knicks score of ${avgKnicks}`);
     }
     else{
-        console.log(`The result is a tie`);
+        console.log(`The result is a tie, this was a tie game.`);
     }
     
 }
     
+calcAverage = (a1, a2, a3) => {
+
+return ((a1 + a2 + a3 ) / 3);
+
+}
+
+
 console.log("Test Data 1: ");
 checkWinner(calcAverage(65, 54, 49),calcAverage(44, 23, 71));
 
