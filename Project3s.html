@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> </meta>
+    </meta>
+    <title>Project 3</title>
+</head>
+
+<body>
+<h1 class = 'secretBox'> &#10067; Guess the Number! &#10068; </h1>
+<h1 class = 'p1'> ? </h1> 
+
+<input type='text' id="guessField" class='guessField' placeholder="Number: 1-100"> 
+<input type="submit" value="Check!" class="guessSubmit">  
+
+<p class = 'p2'>You have 10 chances to guess a number from 1-100!</p>
+
+<h3>&#11088 Score <span class='score'> 10</span></h3>  
+<h3> &#127775 High Score <span class='high-score'>0</span></h3> 
+
+
+<div class="resultParas">
+  <p class="guesses"></p>
+  <p class="lowOrHi"></p>
+</div>
+
+
+
+
+    </body>
+
+    <style>
+        body{
+            background-color: dimgray;
+            opacity: .9;
+            animation: mymove 10s 2s;
+        }
+        @keyframes mymove {
+              0%  {
+                  background-color:dimgray;
+             }
+             25%  {
+                 background-color:darkviolet;
+             }
+             50%  {
+                 background-color:darkslateblue;
+             }
+             75%  {
+                 background-color:darkslategrey;
+             }
+             100% {
+                 background-color:RoyalBlue;
+             }
+                }
+        button{
+            position:absolute;
+            bottom:200px;
+            right:490px;
+            z-index: 10;
+            text-align: center;
+        }
+        .secretBox{
+            text-align: center;
+        }
+        .p1{
+            text-align: center;
+            border: thin;
+            color:white;
+            border-style:solid;
+            margin: auto;
+            width: 50px;
+            height:38px;
+            border-color: red;
+            background-color:yellow;
+            background: red;
+            position: relative;
+            animation: smallbox infinite;
+            animation-duration: 10s;
+        }
+        @keyframes smallbox {
+            0%  {
+                  background-color:PaleVioletRed;
+             }
+             25%  {
+                 background-color:LimeGreen;
+             }
+             50%  {
+                 background-color:Fuchsia;
+             }
+             75%  {
+                 background-color:Black;
+             }
+             100% {
+                 background-color:MediumVioletRed;
+             }
+                }
+        .guessField{
+            position: absolute;
+            bottom:200px;
+            right:600px;
+            width: 200px;
+        }
+        .guessSubmit{
+            position:absolute;
+            bottom:200px;
+            right:600px;
+            z-index: 10;
+        }
+        .p2{
+            color: white;
+            text-shadow: 2px 2px red;
+            font-style: initial;
+            font-size: 25px;
+            text-align: center;
+        }
+
+    </style>
+
+    <script>
+
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+        const guesses = document.querySelector('.guesses');
+        const score = document.querySelector('.score');
+        const highs = document.querySelector('.high-score');
+        const lowOrHi = document.querySelector('.lowOrHi');
+
+        const guessSubmit = document.querySelector('.guessSubmit');
+        const guessField = document.querySelector('.guessField');
+
+        let scores = 10;
+        let high = 0;
+        let guessCount = 1;
+        let resetButton;
+
+
+        function checkGuess() {
+            let userGuess = Number(guessField.value);
+            if (isNaN(userGuess) === true ) {
+                alert("Please input only numbers!");
+            }
+            else {if (guessCount === 1) {
+            guesses.textContent = 'Previous guesses: ';
+            }
+            guesses.textContent += userGuess + ', ';
+
+            if (userGuess === randomNumber) {
+            document.body.style.background = 'green';
+            high++;
+            highs.textContent = high;
+            lowOrHi.textContent = '';
+            setGameOver();
+            } else if (guessCount === 10) {
+            scores = scores - 1;
+            score.textContent = scores;
+            setGameOver();
+            } else {
+            scores = scores - 1;
+            score.textContent = scores;
+            if(userGuess < randomNumber) {
+              lowOrHi.textContent = 'Last guess was too low!';
+            } else if(userGuess > randomNumber) {
+              lowOrHi.textContent = 'Last guess was too high!';
+            }
+
+            }
+
+            guessCount++;
+            guessField.value = '';
+            guessField.focus();}
+        }
+
+        guessSubmit.addEventListener('click', checkGuess);
+
+        function setGameOver() {
+            guessField.disabled = true;
+            guessSubmit.disabled = true;
+            resetButton = document.createElement('button');
+            resetButton.textContent = 'Start new game';
+            document.body.append(resetButton);
+            resetButton.addEventListener('click', resetGame);
+        }
+
+        function resetGame() {
+            guessCount = 1;
+            scores = 10;
+            score.textContent = scores;
+
+            const resetParas = document.querySelectorAll('.resultParas p');
+            for (let i = 0 ; i < resetParas.length ; i++) {
+            resetParas[i].textContent = '';
+            }
+
+            resetButton.parentNode.removeChild(resetButton);
+
+            guessField.disabled = false;
+            guessSubmit.disabled = false;
+            guessField.value = '';
+            guessField.focus();
+
+            document.body.style.background = 'dimgray';
+
+            randomNumber = Math.floor(Math.random() * 100) + 1;
+        }
+
+
+    </script>
+</html>
