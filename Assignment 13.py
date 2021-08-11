@@ -119,11 +119,11 @@ print(x) #should print text all lower-cased
 
 #replace(old,new[,count]) - method replaces each matching occurrence of the old character/text in the string with the new character/text.
 song = 'cold, cold heart'
-# replacing 'cold' with 'hurt'
-print(song.replace('cold', 'hurt'))
-song = 'Let it be, let it be, let it be, let it be'
-# replacing only two occurences of 'let'
-print(song.replace('let', "don't let", 2))
+# replacing 'cold' with 'red'
+print(song.replace('cold', 'red'))
+song = "It's storming, it's pouring, it's storming, it's pouring, it's storming, it's pouring"
+# replacing only two occurences of 'storming'
+print(song.replace('storming', "raining", 2))
 
 #-------------------------------------------------
 
@@ -149,7 +149,7 @@ print(result)
 #-------------------------------------------------
 
 #strip([chars]) -  returns a copy of the string by removing both the leading and the trailing characters (based on the string argument passed).
-string = '  all this extra whitespace   '
+string = '  all this extra whitespace   ' #removes excess whitespace
 print(string.strip())
 
 #-------------------------------------------------
