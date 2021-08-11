@@ -7,7 +7,7 @@ print(myList1)
 
 myList2 = (myList1[1:8])
 print(myList2)
-myList2.append(3)
+myList2.append(13)
 print(myList2)
 myList2.pop(3)
 
