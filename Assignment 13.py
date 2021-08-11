@@ -2,14 +2,15 @@
 
 #**PART 1**
 
-myList1 = [1,2,3,4]
+myList1 = [1,2,3,4,5,6,7,8]
+print(myList1)
 
-myList2 = (myList1[1:4])
+myList2 = (myList1[1:8])
 print(myList2)
-myList2.append(5)
+myList2.append(3)
 print(myList2)
-myList2.pop(2)
-print(myList2)
+myList2.pop(3)
+
 myList3 = myList2 
 print(myList3) 
 
@@ -33,7 +34,7 @@ beach = "I love the beach"
 result = beach.endswith('love the beach', 2)
 print(result)
 
-result = beach.endswith('the beach', 9, 19) #returns false because the string values are incorrect, for true value they should be <=7 && >=16
+result = beach.endswith('the beach', 9, 19) #returns false because the string values are incorrect, for true value they should be <=7,>=16
 print(result)
 
 result = beach.endswith('love the beach', 1, 16)
