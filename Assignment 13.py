@@ -33,7 +33,7 @@ beach = "I love the beach"
 result = beach.endswith('love the beach', 2)
 print(result)
 
-result = beach.endswith('the beach', 9, 19) #returns false because the string values are incorrect, for true value they should be <=7,>=16
+result = beach.endswith('the beach', 9, 19) #returns false because the string values are incorrect, for true value they should be <=7 && >=16
 print(result)
 
 result = beach.endswith('love the beach', 1, 16)
