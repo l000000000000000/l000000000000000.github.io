@@ -163,5 +163,5 @@ print(a) #prints text as ALL uppercase letters
 
 #**PART 3**
 
-group = "Me
+group = "Me."
 print(group)
