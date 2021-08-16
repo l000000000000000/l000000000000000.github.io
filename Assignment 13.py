@@ -163,5 +163,5 @@ print(a) #prints text as ALL uppercase letters
 
 #**PART 3**
 
-group = "Me, Yabsira, Fatuama, but group is not sure what topic to choose yet."
-print (group)
+group = "Me
+print(group)
