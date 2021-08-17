@@ -95,7 +95,7 @@ body {
   z-index: 50;
 }
 .submit {
-  background-color: blue;
+  background-color: gree;
   border-radius: 5px;
   border: 0;
   box-sizing: border-box;
@@ -537,7 +537,7 @@ function Sortdata( a ) {
   var description = a.weather[0].description;
   
   document.getElementById('description').innerHTML = description;
-  document.getElementById('temp').innerHTML = getCelcius + '&deg;';
+  document.getElementById('temp').innerHTML = getFahrenheit + '&deg;';
   document.getElementById('area').innerHTML = a.name;
   
   if( description.indexOf('rain') > 0 ) {    
